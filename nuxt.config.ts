@@ -10,7 +10,7 @@ export default defineNuxtConfig({
 		"@hypernym/nuxt-anime",
 		"@pinia/nuxt",
 		"@vueuse/nuxt",
-		"@bubblesortt/nuxt-es-toolkit",
+		"@bubblesortt/nuxt-es-toolkit"
 	],
 	ssr: false,
 	devtools: { enabled: true },
@@ -18,19 +18,19 @@ export default defineNuxtConfig({
 	css: ["~/assets/main.css"],
 
 	experimental: {
-		typedPages: true,
+		typedPages: true
 	},
 	compatibilityDate: "2025-07-15",
 
 	vite: {
 		optimizeDeps: {
-			include: ["@vue/devtools-core", "@vue/devtools-kit"],
-		},
+			include: ["@vue/devtools-core", "@vue/devtools-kit"]
+		}
 	},
 
 	eslint: {
 		config: {
-			standalone: false,
-		},
-	},
+			standalone: false
+		}
+	}
 });
