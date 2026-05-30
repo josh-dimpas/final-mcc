@@ -47,7 +47,6 @@ export default withNuxt(
 				}
 			],
 			// Order attributes
-			"vue/html-indent": "off",
 			"vue/attributes-order": [
 				"error",
 				{
