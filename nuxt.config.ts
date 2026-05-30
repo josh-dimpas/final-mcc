@@ -1,6 +1,5 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-
 	modules: [
 		"@nuxt/ui",
 		"@nuxt/hints",
@@ -10,7 +9,8 @@ export default defineNuxtConfig({
 		"@hypernym/nuxt-anime",
 		"@pinia/nuxt",
 		"@vueuse/nuxt",
-		"@bubblesortt/nuxt-es-toolkit"
+		"@bubblesortt/nuxt-es-toolkit",
+		"@tresjs/nuxt"
 	],
 	ssr: false,
 	devtools: { enabled: true },
