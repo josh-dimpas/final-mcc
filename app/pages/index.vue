@@ -1,10 +1,15 @@
 <script setup lang="ts">
-const { x, y } = useMouse();
+const gamestore = useGameStore();
+const { name } = storeToRefs(gamestore);
 </script>
 
 <template>
-	<div class="p-4">
-		This is index {{ x }} {{ y }}
+	<div v-auto-animate class="relative w-screen h-screen">
+		<div v-if="name">
+			<Content />
+		</div>
+		<NameDialog v-else />
+		<!-- <StatisticsHelper /> -->
 	</div>
 </template>
 

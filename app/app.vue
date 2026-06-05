@@ -15,13 +15,14 @@ useSeoMeta({ title, description, ogTitle: title, ogDescription: description });
 </script>
 
 <template>
-	<Html class="overflow-x-hidden">
+	<Html class="overflow-x-hidden" lang="en">
+		<Head />
 		<Body class="font-sans antialiased">
 			<UApp :tooltip="{ delayDuration: 0 }">
-				<NuxtLoadingIndicator color="var(--ui-primary)" />
 				<NuxtLayout>
 					<NuxtPage />
 				</NuxtLayout>
+				<NuxtLoadingIndicator color="var(--ui-primary)" />
 			</UApp>
 		</Body>
 	</Html>

@@ -7,15 +7,20 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "lint": "eslint",
+    "lint:fix": "eslint --fix"
   },
   "dependencies": {
     "@bubblesortt/nuxt-es-toolkit": "1.0.10",
     "@compodium/nuxt": "0.1.0-beta.12",
+    "@formkit/auto-animate": "^0.9.0",
     "@hypernym/nuxt-anime": "2.1.1",
     "@nuxt/image": "2.0.0",
     "@nuxt/ui": "4.8.1",
     "@pinia/nuxt": "0.11.3",
+    "@tresjs/cientos": "^5.7.2",
+    "@tresjs/core": "^5.8.1",
     "@tresjs/nuxt": "^5.6.1",
     "@vueuse/nuxt": "14.3.0",
     "nuxt": "^4.4.6",
@@ -30,6 +35,7 @@
     "@nuxt/hints": "1.1.2",
     "@nuxt/kit": ">=3.15",
     "@types/node": "^25.9.1",
+    "@types/three": "^0.184.1",
     "tailwindcss": "^4.0.0",
     "typescript": "^5.6.3 || ^6.0.0"
   }

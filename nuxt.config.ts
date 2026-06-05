@@ -1,3 +1,5 @@
+import { templateCompilerOptions } from "@tresjs/core";
+
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
 	modules: [
@@ -10,10 +12,11 @@ export default defineNuxtConfig({
 		"@pinia/nuxt",
 		"@vueuse/nuxt",
 		"@bubblesortt/nuxt-es-toolkit",
-		"@tresjs/nuxt"
+		"@tresjs/nuxt",
+		"@formkit/auto-animate/nuxt"
 	],
 	ssr: false,
-	devtools: { enabled: true },
+	devtools: { enabled: false },
 
 	css: ["~/assets/main.css"],
 
@@ -23,8 +26,16 @@ export default defineNuxtConfig({
 	compatibilityDate: "2025-07-15",
 
 	vite: {
+		vue: { ...templateCompilerOptions },
 		optimizeDeps: {
-			include: ["@vue/devtools-core", "@vue/devtools-kit"]
+			include: [
+				"@vue/devtools-core",
+				"@vue/devtools-kit",
+				"@tresjs/cientos",
+				"@tresjs/core",
+				"three",
+				"zod"
+			]
 		}
 	},
 

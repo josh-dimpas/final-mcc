@@ -1,12 +1,12 @@
 export default defineAppConfig({
-    ui: {
-        colors: {
-            primary: "emerald",
-            neutral: "neutral",
-        },
+	ui: {
+		colors: {
+			primary: "emerald",
+			neutral: "neutral"
+		},
 
-        link: {
-            base: "underline",
-        },
-    },
+		link: {
+			base: "underline"
+		}
+	}
 });

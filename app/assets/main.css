@@ -3,4 +3,33 @@
 
 @theme static {
   --font-sans: "DM Sans", sans-serif;
+  --font-serif: 'Bebas Neue', 'Georgia';
+}
+
+:root {
+  --background: var(--color-green-900)
+}
+
+body {
+  background-color: var(--background);
+}
+
+h1 {
+  @apply text-8xl font-semibold;
+}
+
+h2 {
+  @apply text-6xl font-semibold;
+}
+
+h3 {
+  @apply text-4xl font-semibold;
+}
+
+h4 {
+  @apply text-2xl font-semibold;
+}
+
+p {
+  @apply text-lg
 }
