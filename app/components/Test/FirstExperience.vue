@@ -27,7 +27,8 @@ onBeforeRender(({ elapsed }) => {
 		:position="[7, 7, 7]"
 	/>
 	<!-- For some reason, the things are not shown -->
-	<OrbitControls :damping-factor="0.05" :enable-pan="false" :enable-rotate="false" :enable-zoom="false" />
+	<!-- <OrbitControls :damping-factor="0.05" :enable-pan="false" :enable-rotate="false" :enable-zoom="false" /> -->
+	<OrbitControls :damping-factor="0.05" />
 
 	<!-- The Donut -->
 	<TresMesh ref="donutRef" :position="[0, 2, 0]">

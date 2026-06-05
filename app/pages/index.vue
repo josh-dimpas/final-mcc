@@ -7,6 +7,9 @@ const { name } = storeToRefs(gamestore);
 	<div v-auto-animate class="relative w-screen h-screen">
 		<div v-if="name">
 			<Content />
+			<!-- <TresCanvas window-size>
+				<FirstExperience />
+			</TresCanvas> -->
 		</div>
 		<NameDialog v-else />
 		<!-- <StatisticsHelper /> -->
