@@ -1,11 +1,17 @@
 <script setup lang="ts">
 const gameStore = useGameStore();
-const { scroll } = storeToRefs(gameStore);
+const { scroll, maxScroll } = storeToRefs(gameStore);
 
 const content = useTemplateRef("content");
 
-const { y } = useScroll(content);
+const { y } = useScroll(content, { behavior: "smooth" });
+
 syncRef(y, scroll);
+
+onMounted(() => {
+	if (!content.value) return;
+	maxScroll.value = content.value.scrollHeight;
+});
 </script>
 
 <template>

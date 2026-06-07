@@ -2,9 +2,11 @@ import { acceptHMRUpdate, defineStore } from "pinia";
 
 export const useGameStore = defineStore("game", () => {
 	const name = ref<string>();
-	const scroll = ref<number>(0);
 
-	return { name, scroll };
+	const scroll = ref<number>(0);
+	const maxScroll = ref<number>(1);
+
+	return { name, scroll, maxScroll };
 });
 
 if (import.meta.hot) {
