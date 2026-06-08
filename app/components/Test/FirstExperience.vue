@@ -1,10 +1,14 @@
 <script setup lang="ts">
-import type { Mesh } from "three";
+import type { Mesh, PerspectiveCamera } from "three";
+
 import { OrbitControls } from "@tresjs/cientos";
 import { useLoop } from "@tresjs/core";
 import { ref } from "vue";
 
+const { camera } = storeToRefs(useGameStore());
+
 // Reference to our donut mesh for animation
+const cam = ref<PerspectiveCamera>();
 const donutRef = ref<Mesh>();
 
 // Animation loop
@@ -18,25 +22,39 @@ onBeforeRender(({ elapsed }) => {
 		rotation.y = elapsed * 0.3;
 	}
 });
+
+onMounted(() => {
+	if (cam.value) {
+		console.log(cam.value.rotation);
+		cam.value.lookAt(0, 0, 0);
+	}
+});
 </script>
 
 <template>
 	<!-- Camera Setup -->
 	<TresPerspectiveCamera
-		:look-at="[0, 0, 0]"
-		:position="[7, 7, 7]"
+		ref="cam"
+		:position="[camera.x, camera.y, camera.z]"
+		:rotation="[camera.rx, camera.ry, camera.rz]"
 	/>
+
+	<TresAmbientLight />
+	<TresDirectionalLight />
+
 	<!-- For some reason, the things are not shown -->
 	<!-- <OrbitControls :damping-factor="0.05" :enable-pan="false" :enable-rotate="false" :enable-zoom="false" /> -->
 	<OrbitControls :damping-factor="0.05" />
 
-	<!-- The Donut -->
+	<!-- The Donut
 	<TresMesh ref="donutRef" :position="[0, 2, 0]">
 		<TresTorusGeometry :args="[1, 0.4, 16, 32]" />
 		<TresMeshBasicMaterial color="#ff6b35" />
-	</TresMesh>
+	</TresMesh> -->
+
+	<ThreeHand />
 
 	<!-- Visual Helpers -->
-	<TresAxesHelper />
-	<TresGridHelper />
+	<!-- <TresAxesHelper />
+	<TresGridHelper /> -->
 </template>

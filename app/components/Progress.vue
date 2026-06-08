@@ -2,7 +2,6 @@
 import { get } from "@vueuse/core";
 
 const NUM_DOTS = 7;
-const DETECTION_PADDING = 10;
 
 const DOTS = [
 	"Welcome",
@@ -14,7 +13,7 @@ const DOTS = [
 	"Final Reflections"
 ];
 
-const { scroll, maxScroll } = storeToRefs(useGameStore());
+const { scroll, maxScroll, pageProgress } = storeToRefs(useGameStore());
 
 const container = useTemplateRef("container");
 
@@ -35,7 +34,7 @@ function handleDotClick(index: number) {
 </script>
 
 <template>
-	<div class="top-0 right-0 left-0 fixed flex justify-center">
+	<div class="top-0 right-0 left-0 z-50 fixed flex justify-center">
 		<div ref="container" class="relative mt-8 w-4xl">
 			<div
 				class="top-0 bottom-0 absolute bg-white m-auto rounded-sm h-8"
@@ -52,6 +51,7 @@ function handleDotClick(index: number) {
 				}"
 				@click="handleDotClick(i + 1)"
 			>
+				<!-- {{ page }} -->
 				{{ section }}
 			</div>
 			<!-- DOTS -->

@@ -3,10 +3,11 @@ const { name } = useGameStore();
 </script>
 
 <template>
-	<div class="min-h-screen snap-center">
+	<div class="relative min-h-screen snap-center">
 		<div class="h-[calc(50vh-6rem)]" />
 		<h1 class="-ml-1">
 			Hello <span class="capitalize">{{ name }}</span>
+			<NuxtImg class="inline" src="./assets/handwave2.gif" />
 		</h1>
 		<p>
 			Nice to meet you.

@@ -3,7 +3,14 @@
 </script>
 
 <template>
-	<div class="min-h-screen text-center snap-center">
+	<div class="relative min-h-screen text-center snap-center">
+		<NuxtImg
+			class="right-0 bottom-0 absolute" src="./assets/penandink.png" :style="{
+				width: `${287}px`,
+				bottom: `${150}px`,
+				right: `${245}px`
+			}"
+		/>
 		<div class="h-[calc(30vh-3rem)]" />
 		<h1>My Story</h1>
 		<p class="mx-auto mt-8 w-3xl text-justify">

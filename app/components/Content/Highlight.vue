@@ -3,7 +3,7 @@
 </script>
 
 <template>
-	<div class="min-h-screen snap-center">
+	<div class="relative min-h-screen snap-center">
 		<div class="h-[calc(27vh-3rem)]" />
 		<h2>I Enjoyed Most...</h2>
 		<p class="pt-6">
@@ -15,6 +15,14 @@
 		<p class="pt-6">
 			After years of solo freelance work, I discovered how much more fulfilling it is to <span class="text-success">build something together with others</span>. The combination of technical learning and human connection made this internship one of the best experiences I've had.
 		</p>
+
+		<NuxtImg
+			class="right-0 bottom-0 absolute" src="./assets/friends.webp" :style="{
+				width: `${500}px`,
+				bottom: `${180}px`,
+				right: `${100}px`
+			}"
+		/>
 	</div>
 </template>
 

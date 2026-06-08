@@ -3,7 +3,13 @@
 </script>
 
 <template>
-	<div class="flex flex-col items-end min-h-screen snap-center">
+	<div class="relative flex flex-col items-end min-h-screen snap-center">
+		<NuxtImg
+			class="top-0 bottom-0 absolute m-auto" src="./assets/turningpoint.png" :style="{
+				width: `${500}px`,
+				left: `${120}px`
+			}"
+		/>
 		<div class="h-[calc(27vh-3rem)]" />
 		<h2 class="w-1/2">
 			Turning Point

@@ -6,15 +6,15 @@ const { name } = storeToRefs(gamestore);
 <template>
 	<div v-auto-animate class="relative w-screen h-screen overflow-hidden">
 		<div v-if="name">
+			<!-- <div class="absolute w-screen h-screen">
+				<TresCanvas clear-color="#0d542b">
+					<TestFirstExperience />
+				</TresCanvas>
+			</div> -->
 			<Content />
 			<Progress />
-			<!-- <TresCanvas window-size>
-				<FirstExperience />
-			</TresCanvas> -->
 		</div>
 		<NameDialog v-else />
 		<!-- <StatisticsHelper /> -->
 	</div>
 </template>
-
-<style lang="css" scoped></style>

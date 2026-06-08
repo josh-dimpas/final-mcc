@@ -15,7 +15,7 @@ onMounted(() => {
 </script>
 
 <template>
-	<div id="content" ref="content" class="flex-none mx-auto px-8 h-screen overflow-y-auto snap-center snap-mandatory snap-y container" dir="ltr">
+	<div id="content" ref="content" class="right-0 left-0 z-50 absolute flex-none m-auto px-8 h-screen overflow-y-auto snap-center snap-mandatory snap-y container">
 		<ContentIntroduction />
 		<ContentWelcome />
 		<ContentCulture />
@@ -39,7 +39,7 @@ onMounted(() => {
     ::before, ::after {
         content: '';
         display: block;
-        position: absolute;
+        position: fixed;
         top: 0;
         left: 0;
         width: 100vw;
